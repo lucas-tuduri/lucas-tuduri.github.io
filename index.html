@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lucas Tuduri | Economics</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #303030;
+      background: white;
+      line-height: 1.75;
+    }
+
+    /* =====================
+       HEADER / BANNER
+       ===================== */
+
+    .hero {
+      height: 370px;
+
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.30)
+        ),
+        url("landscape.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      background-color: #526779;
+
+      position: relative;
+      color: white;
+    }
+
+    /* Navigation over the photograph */
+
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 22px 30px;
+      z-index: 10;
+    }
+
+    .site-title {
+      font-size: 19px;
+      font-weight: 400;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      opacity: 0.95;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Centered name */
+
+    .hero-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: clamp(38px, 5vw, 54px);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      font-weight: 300;
+      margin-top: 8px;
+      opacity: 0.95;
+    }
+
+    /* =====================
+       MAIN CONTENT
+       ===================== */
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 30px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #d5d5d5;
+      margin: 10px 0 35px;
+    }
+
+    section {
+      scroll-margin-top: 30px;
+    }
+
+    /* =====================
+       ABOUT SECTION
+       ===================== */
+
+    .about {
+      padding-top: 0;
+      padding-bottom: 65px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .about-text {
+      padding: 25px 0;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .about-text p {
+      margin: 0 0 30px;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 370px;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* =====================
+       RESEARCH
+       ===================== */
+
+    .research {
+      padding: 50px 0 65px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      margin: 0 0 25px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 400;
+      margin: 0 0 20px;
+    }
+
+    .paper {
+      margin-bottom: 22px;
+    }
+
+    .paper-title {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .paper-details {
+      font-size: 14px;
+      color: #666;
+      margin-top: 3px;
+    }
+
+    a {
+      color: #1a73e8;
+    }
+
+    /* =====================
+       CV AND CONTACT
+       ===================== */
+
+    .resume,
+    .contact {
+      border-top: 1px solid #e0e0e0;
+      padding: 50px 0;
+    }
+
+    .resume p,
+    .contact p {
+      font-size: 16px;
+    }
+
+    /* =====================
+       FOOTER
+       ===================== */
+
+    footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 25px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* =====================
+       MOBILE
+       ===================== */
+
+    @media (max-width: 700px) {
+
+      .hero {
+        height: 320px;
+      }
+
+      .navbar {
+        padding: 18px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero-subtitle {
+        font-size: 14px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .about-text {
+        padding: 0;
+      }
+
+      .profile-photo {
+        max-width: 320px;
+      }
+
+      .container {
+        padding: 0 25px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================
+       HEADER
+       ===================== -->
+
+  <header class="hero">
+
+    <div class="navbar">
+
+      <a class="site-title" href="#">
+        Lucas Tuduri
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">Home</a>
+        <a href="#research">Research</a>
+        <a href="#resume">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+
+    <div class="hero-content">
+
+      <h1>Lucas Tuduri</h1>
+
+      <div class="hero-subtitle">
+        Ph.D. Candidate in Economics
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =====================
+         ABOUT ME
+         ===================== -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <hr class="divider">
+
+        <div class="about-grid">
+
+          <div class="about-text">
+
+            <p>
+              I am a Ph.D. candidate in Economics
+              at Université Paris-Panthéon-Assas,
+              under the supervision of
+              Prof. Antoine Billot.
+            </p>
+
+            <p>
+              You can find my academic
+              <a href="resume.pdf">CV here</a>.
+            </p>
+
+          </div>
+
+          <div>
+
+            <img
+              class="profile-photo"
+              src="portrait.jpg"
+              alt="Portrait of Lucas Tuduri"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================
+         RESEARCH
+         ===================== -->
+
+    <section class="research" id="research">
+
+      <div class="container">
+
+        <h2>Research</h2>
+
+        <h3>Working Papers</h3>
+
+        <div class="paper">
+          <p class="paper-title">
+            Motivated lenses in episodic learning
+          </p>
+          <div class="paper-details">
+            2026 · <a href="paper4.pdf">PDF</a>
+          </div>
+        </div>
+
+        <div class="paper">
+          <p class="paper-title">
+            Coarse learning &amp; encoding
+          </p>
+          <div class="paper-details">
+            2026 · <a href="paper3.pdf">PDF</a>
+          </div>
+        </div>
+
+        <div class="paper">
+          <p class="paper-title">
+            Revealed lenses axiomatization
+          </p>
+          <div class="paper-details">
+            2026 · <a href="paper2.pdf">PDF</a>
+          </div>
+        </div>
+
+        <div class="paper">
+          <p class="paper-title">
+            Survey
+          </p>
+          <div class="paper-details">
+            2026 · <a href="paper1.pdf">PDF</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================
+         CV
+         ===================== -->
+
+    <section class="resume" id="resume">
+
+      <div class="container">
+
+        <h2>Curriculum Vitae</h2>
+
+        <p>
+          <a href="resume.pdf">
+            Download my CV (October 2026)
+          </a>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================
+         CONTACT
+         ===================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <h2>Contact</h2>
+
+        <p>
+          <a href="mailto:lucas.tuduri@protonmail.com">
+            lucas.tuduri@protonmail.com
+          </a>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 Lucas Tuduri
+  </footer>
+
+</body>
+</html>
