@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lucas Tuduri | Economics</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --text: #202124;
+      --secondary: #5f6368;
+      --blue: #1a73e8;
+      --background: #ffffff;
+      --light: #f8f9fa;
+      --border: #dadce0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.7;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    /* HERO BANNER */
+
+    .hero {
+      background: linear-gradient(
+        120deg,
+        #e8f0fe 0%,
+        #f8f9fa 100%
+      );
+
+      padding: 105px 30px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 62px);
+      font-weight: 400;
+      letter-spacing: -1.5px;
+      margin: 0 0 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: var(--secondary);
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 75px 30px;
+      scroll-margin-top: 70px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      margin: 0 0 28px;
+      letter-spacing: -0.4px;
+    }
+
+    h3 {
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    /* ABOUT */
+
+    .about-text {
+      max-width: 750px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: #3c4043;
+    }
+
+    /* RESEARCH */
+
+    #research {
+      background: var(--light);
+    }
+
+    .subheading {
+      color: var(--secondary);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .paper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .paper:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    .paper h3 {
+      font-size: 17px;
+      margin: 0 0 5px;
+    }
+
+    .paper-year {
+      color: var(--secondary);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .pdf-link {
+      display: inline-block;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+
+      padding: 8px 15px;
+      border: 1px solid var(--blue);
+      border-radius: 4px;
+
+      transition: background 0.2s;
+    }
+
+    .pdf-link:hover {
+      background: #e8f0fe;
+    }
+
+    /* RESUME */
+
+    .resume-link {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+
+      background: var(--blue);
+      color: white;
+
+      padding: 11px 22px;
+      border-radius: 4px;
+
+      transition: background 0.2s;
+    }
+
+    .resume-link:hover {
+      background: #1558b0;
+    }
+
+    /* CONTACT */
+
+    #contact {
+      background: var(--light);
+    }
+
+    .contact-email {
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--secondary);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 75px 25px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 25px;
+      }
+
+      .paper {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <div class="navbar">
+
+      <a class="site-name" href="#">
+        Lucas Tuduri
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">Home</a>
+        <a href="#research">Research</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <h1>Lucas Tuduri</h1>
+
+    <p>
+      Ph.D. Candidate in Economics
+      <br>
+      Université Paris-Panthéon-Assas
+    </p>
+
+  </div>
+
+
+  <main>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <h2>About Me</h2>
+
+        <p class="about-text">
+          I am a Ph.D. candidate in economics at
+          Université Paris-Panthéon-Assas,
+          under the supervision of
+          Prof. Antoine Billot.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESEARCH -->
+
+    <section id="research">
+
+      <div class="container">
+
+        <h2>Research</h2>
+
+        <p class="subheading">
+          Working Papers
+        </p>
+
+
+        <div class="paper">
+
+          <div>
+            <h3>Motivated lenses in episodic learning</h3>
+            <p class="paper-year">2026</p>
+          </div>
+
+          <a class="pdf-link" href="paper4.pdf">
+            PDF
+          </a>
+
+        </div>
+
+
+        <div class="paper">
+
+          <div>
+            <h3>Coarse learning &amp; encoding</h3>
+            <p class="paper-year">2026</p>
+          </div>
+
+          <a class="pdf-link" href="paper3.pdf">
+            PDF
+          </a>
+
+        </div>
+
+
+        <div class="paper">
+
+          <div>
+            <h3>Revealed lenses axiomatization</h3>
+            <p class="paper-year">2026</p>
+          </div>
+
+          <a class="pdf-link" href="paper2.pdf">
+            PDF
+          </a>
+
+        </div>
+
+
+        <div class="paper">
+
+          <div>
+            <h3>Survey</h3>
+            <p class="paper-year">2026</p>
+          </div>
+
+          <a class="pdf-link" href="paper1.pdf">
+            PDF
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESUME -->
+
+    <section id="resume">
+
+      <div class="container">
+
+        <h2>Resume</h2>
+
+        <p>
+          You can find my academic resume below.
+        </p>
+
+        <a class="resume-link" href="resume.pdf">
+          View Resume (PDF)
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <h2>Contact</h2>
+
+        <p>
+          Feel free to contact me by email.
+        </p>
+
+        <a class="contact-email"
+           href="mailto:lucas.tuduri@protonmail.com">
+          lucas.tuduri@protonmail.com
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Lucas Tuduri
+  </footer>
+
+
+</body>
+</html>
